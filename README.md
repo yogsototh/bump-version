@@ -2,7 +2,12 @@
 
 Increment your version using this command line tool.
 
-It depends only `zsh` so should be really portable.
+It follows the SemVer conventions. See <http://semver.org>.
+
+It depends only `zsh` so should be really portable
+but also quite slow if you need to bump thousands versions per seconds.
+
+In the future I might create a fast binary executable.
 
 ## Install
 
@@ -21,3 +26,5 @@ $ bump.sh 0.14.2 patch
 $ bump.sh 0.14.2 qualifier rc1
 0.14.2-rc1
 ~~~
+
+That's it!

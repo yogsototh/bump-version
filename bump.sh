@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# change release version in all subprojects
-
+# Author: Yann Esposito
+# License: MIT
 
 ## 1. get current version
 
