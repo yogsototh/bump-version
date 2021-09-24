@@ -7,7 +7,7 @@
 ---
 
 
-# Semantic Versionning Bump
+# Semantic Versioning Bump
 
 Increment your version using this command line tool.
 
