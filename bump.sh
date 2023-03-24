@@ -8,11 +8,13 @@
 (($#<1)) && {
     echo "Usage: $0:t VERSION PART [QUALIFIER]" >&2
     echo "where: VERSION is a version number" >&2
-    echo "       PART can be major, minor, patch or qualifier" >&2
+    echo "       PART can be major, minor, patch, qualifier or next-dev" >&2
     echo "       QUALIFIER can be any string" >&2
     echo >&2
     echo "Example: $0:t 1.10.1 minor"
     echo "         1.11.0"
+    echo "Example: $0:t 1.6.0-SNAPSHOT next-dev"
+    echo "         1.6.1-SNAPSHOT"
     exit 1
 }
 
@@ -47,6 +49,7 @@ bump() {
         minor) echo $major.$((minor+1)).0;;
         patch) echo $major.$minor.$((patch+1));;
         qualifier) echo $major.$minor.$patch-$newqualifier;;
+        next-dev) echo $major.$minor.$((patch+1))-SNAPSHOT;;
         *) echo "$part should be either major, minor, patch or qualifier, got '$part'"
     esac
 }
