@@ -34,6 +34,8 @@ $ bump.sh 0.14.2 patch
 0.14.3
 $ bump.sh 0.14.2 qualifier rc1
 0.14.2-rc1
+$ bump.sh 0.14.2-SNAPSHOT release
+0.14.2
 ~~~
 
 That's it!
